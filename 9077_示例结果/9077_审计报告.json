@@ -1,0 +1,591 @@
+{
+  "schema_version": 1,
+  "source": "9077_示例订单.csv",
+  "config": "9077_清洗规则.json",
+  "generated_at": "2026-10-18T20:14:55+00:00",
+  "counts": {
+    "processed": 24,
+    "valid": 13,
+    "invalid": 5,
+    "duplicate": 3,
+    "filtered": 3,
+    "blank_rows_skipped": 0
+  },
+  "outputs": {
+    "csv": "9077_清洗结果.csv",
+    "xlsx": "9077_清洗结果.xlsx",
+    "json": "9077_审计报告.json",
+    "html": "9077_审计报告.html"
+  },
+  "rows": [
+    {
+      "source_row": 2,
+      "status": "valid",
+      "reasons": [],
+      "original": {
+        "order_id": " ord-1001 ",
+        "customer": "Sample Customer 01",
+        "email": " SAMPLE01@EXAMPLE.COM ",
+        "amount": "125.50",
+        "order_date": "2026-10-06",
+        "status": "PAID",
+        "region": "east"
+      },
+      "cleaned": {
+        "order_id": "ORD-1001",
+        "customer": "Sample Customer 01",
+        "email": "sample01@example.com",
+        "amount": "125.50",
+        "order_date": "2026-10-06",
+        "status": "paid",
+        "region": "EAST"
+      }
+    },
+    {
+      "source_row": 3,
+      "status": "valid",
+      "reasons": [],
+      "original": {
+        "order_id": "ORD-1002",
+        "customer": "Sample Customer 02",
+        "email": "sample02@example.com",
+        "amount": "86.20",
+        "order_date": "2026-10-02",
+        "status": "pending",
+        "region": "west"
+      },
+      "cleaned": {
+        "order_id": "ORD-1002",
+        "customer": "Sample Customer 02",
+        "email": "sample02@example.com",
+        "amount": "86.20",
+        "order_date": "2026-10-02",
+        "status": "pending",
+        "region": "WEST"
+      }
+    },
+    {
+      "source_row": 4,
+      "status": "valid",
+      "reasons": [],
+      "original": {
+        "order_id": "ORD-1003",
+        "customer": "Sample Customer 03",
+        "email": "sample03@example.com",
+        "amount": "210.00",
+        "order_date": "10/04/2026",
+        "status": "paid",
+        "region": "north"
+      },
+      "cleaned": {
+        "order_id": "ORD-1003",
+        "customer": "Sample Customer 03",
+        "email": "sample03@example.com",
+        "amount": "210.00",
+        "order_date": "2026-10-04",
+        "status": "paid",
+        "region": "NORTH"
+      }
+    },
+    {
+      "source_row": 5,
+      "status": "valid",
+      "reasons": [],
+      "original": {
+        "order_id": "ORD-1004",
+        "customer": "Sample Customer 04",
+        "email": "sample04@example.com",
+        "amount": "49.95",
+        "order_date": "2026-10-01",
+        "status": "paid",
+        "region": "south"
+      },
+      "cleaned": {
+        "order_id": "ORD-1004",
+        "customer": "Sample Customer 04",
+        "email": "sample04@example.com",
+        "amount": "49.95",
+        "order_date": "2026-10-01",
+        "status": "paid",
+        "region": "SOUTH"
+      }
+    },
+    {
+      "source_row": 6,
+      "status": "valid",
+      "reasons": [],
+      "original": {
+        "order_id": "ORD-1005",
+        "customer": "Sample Customer 05",
+        "email": "sample05@example.com",
+        "amount": "305.40",
+        "order_date": "2026-10-05",
+        "status": "pending",
+        "region": "east"
+      },
+      "cleaned": {
+        "order_id": "ORD-1005",
+        "customer": "Sample Customer 05",
+        "email": "sample05@example.com",
+        "amount": "305.40",
+        "order_date": "2026-10-05",
+        "status": "pending",
+        "region": "EAST"
+      }
+    },
+    {
+      "source_row": 7,
+      "status": "valid",
+      "reasons": [],
+      "original": {
+        "order_id": "ORD-1006",
+        "customer": "Sample Customer 06",
+        "email": "sample06@example.com",
+        "amount": "120.00",
+        "order_date": "2026-10-03",
+        "status": "paid",
+        "region": "west"
+      },
+      "cleaned": {
+        "order_id": "ORD-1006",
+        "customer": "Sample Customer 06",
+        "email": "sample06@example.com",
+        "amount": "120.00",
+        "order_date": "2026-10-03",
+        "status": "paid",
+        "region": "WEST"
+      }
+    },
+    {
+      "source_row": 8,
+      "status": "valid",
+      "reasons": [],
+      "original": {
+        "order_id": "ORD-1007",
+        "customer": "Sample Customer 07",
+        "email": "sample07@example.com",
+        "amount": "75.60",
+        "order_date": "2026-10-12",
+        "status": "paid",
+        "region": "north"
+      },
+      "cleaned": {
+        "order_id": "ORD-1007",
+        "customer": "Sample Customer 07",
+        "email": "sample07@example.com",
+        "amount": "75.60",
+        "order_date": "2026-10-12",
+        "status": "paid",
+        "region": "NORTH"
+      }
+    },
+    {
+      "source_row": 9,
+      "status": "valid",
+      "reasons": [],
+      "original": {
+        "order_id": "ORD-1008",
+        "customer": "Sample Customer 08",
+        "email": "sample08@example.com",
+        "amount": "99.00",
+        "order_date": "2026-10-08",
+        "status": "pending",
+        "region": "south"
+      },
+      "cleaned": {
+        "order_id": "ORD-1008",
+        "customer": "Sample Customer 08",
+        "email": "sample08@example.com",
+        "amount": "99.00",
+        "order_date": "2026-10-08",
+        "status": "pending",
+        "region": "SOUTH"
+      }
+    },
+    {
+      "source_row": 10,
+      "status": "valid",
+      "reasons": [],
+      "original": {
+        "order_id": "ORD-1009",
+        "customer": "Sample Customer 09",
+        "email": "sample09@example.com",
+        "amount": "184.75",
+        "order_date": "2026-10-07",
+        "status": "paid",
+        "region": "east"
+      },
+      "cleaned": {
+        "order_id": "ORD-1009",
+        "customer": "Sample Customer 09",
+        "email": "sample09@example.com",
+        "amount": "184.75",
+        "order_date": "2026-10-07",
+        "status": "paid",
+        "region": "EAST"
+      }
+    },
+    {
+      "source_row": 11,
+      "status": "valid",
+      "reasons": [],
+      "original": {
+        "order_id": "ORD-1010",
+        "customer": "Sample Customer 10",
+        "email": "sample10@example.com",
+        "amount": "66.00",
+        "order_date": "2026-10-11",
+        "status": "pending",
+        "region": "west"
+      },
+      "cleaned": {
+        "order_id": "ORD-1010",
+        "customer": "Sample Customer 10",
+        "email": "sample10@example.com",
+        "amount": "66.00",
+        "order_date": "2026-10-11",
+        "status": "pending",
+        "region": "WEST"
+      }
+    },
+    {
+      "source_row": 12,
+      "status": "valid",
+      "reasons": [],
+      "original": {
+        "order_id": "ORD-1011",
+        "customer": "Sample Customer 11",
+        "email": "sample11@example.com",
+        "amount": "230.10",
+        "order_date": "2026-10-10",
+        "status": "paid",
+        "region": "north"
+      },
+      "cleaned": {
+        "order_id": "ORD-1011",
+        "customer": "Sample Customer 11",
+        "email": "sample11@example.com",
+        "amount": "230.10",
+        "order_date": "2026-10-10",
+        "status": "paid",
+        "region": "NORTH"
+      }
+    },
+    {
+      "source_row": 13,
+      "status": "valid",
+      "reasons": [],
+      "original": {
+        "order_id": "ORD-1012",
+        "customer": "Sample Customer 12",
+        "email": "sample12@example.com",
+        "amount": "41.25",
+        "order_date": "2026-10-09",
+        "status": "paid",
+        "region": "south"
+      },
+      "cleaned": {
+        "order_id": "ORD-1012",
+        "customer": "Sample Customer 12",
+        "email": "sample12@example.com",
+        "amount": "41.25",
+        "order_date": "2026-10-09",
+        "status": "paid",
+        "region": "SOUTH"
+      }
+    },
+    {
+      "source_row": 14,
+      "status": "duplicate",
+      "reasons": [
+        "duplicate of source row 2 on order_id"
+      ],
+      "original": {
+        "order_id": "ord-1001",
+        "customer": "Duplicate 01",
+        "email": "duplicate01@example.com",
+        "amount": "125.50",
+        "order_date": "2026-10-06",
+        "status": "paid",
+        "region": "east"
+      },
+      "cleaned": {
+        "order_id": "ORD-1001",
+        "customer": "Duplicate 01",
+        "email": "duplicate01@example.com",
+        "amount": "125.50",
+        "order_date": "2026-10-06",
+        "status": "paid",
+        "region": "EAST"
+      }
+    },
+    {
+      "source_row": 15,
+      "status": "duplicate",
+      "reasons": [
+        "duplicate of source row 4 on order_id"
+      ],
+      "original": {
+        "order_id": " ORD-1003 ",
+        "customer": "Duplicate 03",
+        "email": "duplicate03@example.com",
+        "amount": "210.00",
+        "order_date": "2026-10-04",
+        "status": "paid",
+        "region": "north"
+      },
+      "cleaned": {
+        "order_id": "ORD-1003",
+        "customer": "Duplicate 03",
+        "email": "duplicate03@example.com",
+        "amount": "210.00",
+        "order_date": "2026-10-04",
+        "status": "paid",
+        "region": "NORTH"
+      }
+    },
+    {
+      "source_row": 16,
+      "status": "duplicate",
+      "reasons": [
+        "duplicate of source row 9 on order_id"
+      ],
+      "original": {
+        "order_id": "ord-1008",
+        "customer": "Duplicate 08",
+        "email": "duplicate08@example.com",
+        "amount": "99.00",
+        "order_date": "2026-10-08",
+        "status": "pending",
+        "region": "south"
+      },
+      "cleaned": {
+        "order_id": "ORD-1008",
+        "customer": "Duplicate 08",
+        "email": "duplicate08@example.com",
+        "amount": "99.00",
+        "order_date": "2026-10-08",
+        "status": "pending",
+        "region": "SOUTH"
+      }
+    },
+    {
+      "source_row": 17,
+      "status": "invalid",
+      "reasons": [
+        "amount: number is below 0"
+      ],
+      "original": {
+        "order_id": "ORD-2001",
+        "customer": "Invalid amount",
+        "email": "sample20@example.com",
+        "amount": "-10.00",
+        "order_date": "2026-10-13",
+        "status": "paid",
+        "region": "east"
+      },
+      "cleaned": {
+        "order_id": "ORD-2001",
+        "customer": "Invalid amount",
+        "email": "sample20@example.com",
+        "order_date": "2026-10-13",
+        "status": "paid",
+        "region": "EAST"
+      }
+    },
+    {
+      "source_row": 18,
+      "status": "invalid",
+      "reasons": [
+        "email: invalid email address"
+      ],
+      "original": {
+        "order_id": "ORD-2002",
+        "customer": "Invalid email",
+        "email": "broken-email",
+        "amount": "100.00",
+        "order_date": "2026-10-13",
+        "status": "paid",
+        "region": "west"
+      },
+      "cleaned": {
+        "order_id": "ORD-2002",
+        "customer": "Invalid email",
+        "amount": "100.00",
+        "order_date": "2026-10-13",
+        "status": "paid",
+        "region": "WEST"
+      }
+    },
+    {
+      "source_row": 19,
+      "status": "invalid",
+      "reasons": [
+        "customer: required value is missing"
+      ],
+      "original": {
+        "order_id": "ORD-2003",
+        "customer": "",
+        "email": "sample22@example.com",
+        "amount": "100.00",
+        "order_date": "2026-10-13",
+        "status": "paid",
+        "region": "north"
+      },
+      "cleaned": {
+        "order_id": "ORD-2003",
+        "email": "sample22@example.com",
+        "amount": "100.00",
+        "order_date": "2026-10-13",
+        "status": "paid",
+        "region": "NORTH"
+      }
+    },
+    {
+      "source_row": 20,
+      "status": "invalid",
+      "reasons": [
+        "order_date: date does not match %Y-%m-%d, %m/%d/%Y"
+      ],
+      "original": {
+        "order_id": "ORD-2004",
+        "customer": "Invalid date",
+        "email": "sample23@example.com",
+        "amount": "100.00",
+        "order_date": "2026-02-30",
+        "status": "paid",
+        "region": "south"
+      },
+      "cleaned": {
+        "order_id": "ORD-2004",
+        "customer": "Invalid date",
+        "email": "sample23@example.com",
+        "amount": "100.00",
+        "status": "paid",
+        "region": "SOUTH"
+      }
+    },
+    {
+      "source_row": 21,
+      "status": "filtered",
+      "reasons": [
+        "excluded by filter: status in ['paid', 'pending']"
+      ],
+      "original": {
+        "order_id": "ORD-3001",
+        "customer": "Cancelled 01",
+        "email": "sample30@example.com",
+        "amount": "50.00",
+        "order_date": "2026-10-14",
+        "status": "cancelled",
+        "region": "east"
+      },
+      "cleaned": {
+        "order_id": "ORD-3001",
+        "customer": "Cancelled 01",
+        "email": "sample30@example.com",
+        "amount": "50.00",
+        "order_date": "2026-10-14",
+        "status": "cancelled",
+        "region": "EAST"
+      }
+    },
+    {
+      "source_row": 22,
+      "status": "filtered",
+      "reasons": [
+        "excluded by filter: status in ['paid', 'pending']"
+      ],
+      "original": {
+        "order_id": "ORD-3002",
+        "customer": "Cancelled 02",
+        "email": "sample31@example.com",
+        "amount": "60.00",
+        "order_date": "2026-10-14",
+        "status": "cancelled",
+        "region": "west"
+      },
+      "cleaned": {
+        "order_id": "ORD-3002",
+        "customer": "Cancelled 02",
+        "email": "sample31@example.com",
+        "amount": "60.00",
+        "order_date": "2026-10-14",
+        "status": "cancelled",
+        "region": "WEST"
+      }
+    },
+    {
+      "source_row": 23,
+      "status": "filtered",
+      "reasons": [
+        "excluded by filter: status in ['paid', 'pending']"
+      ],
+      "original": {
+        "order_id": "ORD-3003",
+        "customer": "Cancelled 03",
+        "email": "sample32@example.com",
+        "amount": "70.00",
+        "order_date": "2026-10-14",
+        "status": "cancelled",
+        "region": "north"
+      },
+      "cleaned": {
+        "order_id": "ORD-3003",
+        "customer": "Cancelled 03",
+        "email": "sample32@example.com",
+        "amount": "70.00",
+        "order_date": "2026-10-14",
+        "status": "cancelled",
+        "region": "NORTH"
+      }
+    },
+    {
+      "source_row": 24,
+      "status": "valid",
+      "reasons": [],
+      "original": {
+        "order_id": "ORD-1013",
+        "customer": "Zero amount",
+        "email": "sample13@example.com",
+        "amount": "0",
+        "order_date": "2026-10-15",
+        "status": "paid",
+        "region": ""
+      },
+      "cleaned": {
+        "order_id": "ORD-1013",
+        "customer": "Zero amount",
+        "email": "sample13@example.com",
+        "amount": "0.00",
+        "order_date": "2026-10-15",
+        "status": "paid",
+        "region": "UNKNOWN"
+      }
+    },
+    {
+      "source_row": 25,
+      "status": "invalid",
+      "reasons": [
+        "amount: expected a finite decimal with at most 100 digits"
+      ],
+      "original": {
+        "order_id": "ORD-2005",
+        "customer": "Non finite amount",
+        "email": "sample24@example.com",
+        "amount": "NaN",
+        "order_date": "2026-10-13",
+        "status": "paid",
+        "region": "south"
+      },
+      "cleaned": {
+        "order_id": "ORD-2005",
+        "customer": "Non finite amount",
+        "email": "sample24@example.com",
+        "order_date": "2026-10-13",
+        "status": "paid",
+        "region": "SOUTH"
+      }
+    }
+  ]
+}
