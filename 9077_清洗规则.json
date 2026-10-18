@@ -1,0 +1,14 @@
+{
+  "columns": {
+    "order_id": {"type": "string", "required": true, "case": "upper"},
+    "customer": {"type": "string", "required": true},
+    "email": {"type": "email", "required": true, "case": "lower"},
+    "amount": {"type": "decimal", "required": true, "min": "0", "decimal_places": 2},
+    "order_date": {"type": "date", "required": true, "formats": ["%Y-%m-%d", "%m/%d/%Y"]},
+    "status": {"type": "enum", "required": true, "case": "lower", "choices": ["paid", "pending", "cancelled"]},
+    "region": {"type": "string", "case": "upper", "default": "UNKNOWN"}
+  },
+  "deduplicate_by": ["order_id"],
+  "filters": [{"column": "status", "operator": "in", "value": ["paid", "pending"]}],
+  "sort": [{"column": "order_date", "descending": false}]
+}

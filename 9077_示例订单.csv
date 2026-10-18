@@ -1,0 +1,25 @@
+order_id,customer,email,amount,order_date,status,region
+ ord-1001 ,Sample Customer 01, SAMPLE01@EXAMPLE.COM ,125.50,2026-10-06,PAID,east
+ORD-1002,Sample Customer 02,sample02@example.com,86.20,2026-10-02,pending,west
+ORD-1003,Sample Customer 03,sample03@example.com,210.00,10/04/2026,paid,north
+ORD-1004,Sample Customer 04,sample04@example.com,49.95,2026-10-01,paid,south
+ORD-1005,Sample Customer 05,sample05@example.com,305.40,2026-10-05,pending,east
+ORD-1006,Sample Customer 06,sample06@example.com,120.00,2026-10-03,paid,west
+ORD-1007,Sample Customer 07,sample07@example.com,75.60,2026-10-12,paid,north
+ORD-1008,Sample Customer 08,sample08@example.com,99.00,2026-10-08,pending,south
+ORD-1009,Sample Customer 09,sample09@example.com,184.75,2026-10-07,paid,east
+ORD-1010,Sample Customer 10,sample10@example.com,66.00,2026-10-11,pending,west
+ORD-1011,Sample Customer 11,sample11@example.com,230.10,2026-10-10,paid,north
+ORD-1012,Sample Customer 12,sample12@example.com,41.25,2026-10-09,paid,south
+ord-1001,Duplicate 01,duplicate01@example.com,125.50,2026-10-06,paid,east
+ ORD-1003 ,Duplicate 03,duplicate03@example.com,210.00,2026-10-04,paid,north
+ord-1008,Duplicate 08,duplicate08@example.com,99.00,2026-10-08,pending,south
+ORD-2001,Invalid amount,sample20@example.com,-10.00,2026-10-13,paid,east
+ORD-2002,Invalid email,broken-email,100.00,2026-10-13,paid,west
+ORD-2003,,sample22@example.com,100.00,2026-10-13,paid,north
+ORD-2004,Invalid date,sample23@example.com,100.00,2026-02-30,paid,south
+ORD-3001,Cancelled 01,sample30@example.com,50.00,2026-10-14,cancelled,east
+ORD-3002,Cancelled 02,sample31@example.com,60.00,2026-10-14,cancelled,west
+ORD-3003,Cancelled 03,sample32@example.com,70.00,2026-10-14,cancelled,north
+ORD-1013,Zero amount,sample13@example.com,0,2026-10-15,paid,
+ORD-2005,Non finite amount,sample24@example.com,NaN,2026-10-13,paid,south

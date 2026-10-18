@@ -1,0 +1,21 @@
+test_actual_workbook_formulas_are_never_evaluated_or_exported (__main__.CleanerAcceptanceTests.test_actual_workbook_formulas_are_never_evaluated_or_exported) ... ok
+test_audit_accounts_for_every_nonblank_row (__main__.CleanerAcceptanceTests.test_audit_accounts_for_every_nonblank_row) ... ok
+test_bad_json_config_leaves_no_outputs (__main__.CleanerAcceptanceTests.test_bad_json_config_leaves_no_outputs) ... ok
+test_blank_csv_header_is_rejected (__main__.CleanerAcceptanceTests.test_blank_csv_header_is_rejected) ... ok
+test_csv_and_xlsx_inputs_produce_identical_records (__main__.CleanerAcceptanceTests.test_csv_and_xlsx_inputs_produce_identical_records) ... ok
+test_decimal_rounding_and_large_values_keep_exact_text (__main__.CleanerAcceptanceTests.test_decimal_rounding_and_large_values_keep_exact_text) ... ok
+test_duplicate_csv_headers_are_rejected (__main__.CleanerAcceptanceTests.test_duplicate_csv_headers_are_rejected) ... ok
+test_existing_output_is_not_overwritten_and_no_partial_files (__main__.CleanerAcceptanceTests.test_existing_output_is_not_overwritten_and_no_partial_files) ... ok
+test_formula_like_header_is_safe_in_both_exports (__main__.CleanerAcceptanceTests.test_formula_like_header_is_safe_in_both_exports) ... ok
+test_formula_like_text_is_escaped_in_csv_and_workbook (__main__.CleanerAcceptanceTests.test_formula_like_text_is_escaped_in_csv_and_workbook) ... ok
+test_invalid_config_is_rejected_without_outputs (__main__.CleanerAcceptanceTests.test_invalid_config_is_rejected_without_outputs) ... ok
+test_missing_required_header_is_rejected (__main__.CleanerAcceptanceTests.test_missing_required_header_is_rejected) ... ok
+test_nonfinite_negative_and_unknown_values_are_invalid (__main__.CleanerAcceptanceTests.test_nonfinite_negative_and_unknown_values_are_invalid) ... ok
+test_normalization_defaults_sorting_and_source_preservation (__main__.CleanerAcceptanceTests.test_normalization_defaults_sorting_and_source_preservation) ... ok
+test_report_escapes_untrusted_html (__main__.CleanerAcceptanceTests.test_report_escapes_untrusted_html) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.503s
+
+OK
+Desktop integration: PASS. 24 audit rows; 13 kept, 5 invalid, 3 duplicates, 3 filtered.
