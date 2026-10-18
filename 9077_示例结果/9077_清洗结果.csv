@@ -1,0 +1,14 @@
+﻿order_id,customer,email,amount,order_date,status,region
+ORD-1004,Sample Customer 04,sample04@example.com,49.95,2026-10-01,paid,SOUTH
+ORD-1002,Sample Customer 02,sample02@example.com,86.20,2026-10-02,pending,WEST
+ORD-1006,Sample Customer 06,sample06@example.com,120.00,2026-10-03,paid,WEST
+ORD-1003,Sample Customer 03,sample03@example.com,210.00,2026-10-04,paid,NORTH
+ORD-1005,Sample Customer 05,sample05@example.com,305.40,2026-10-05,pending,EAST
+ORD-1001,Sample Customer 01,sample01@example.com,125.50,2026-10-06,paid,EAST
+ORD-1009,Sample Customer 09,sample09@example.com,184.75,2026-10-07,paid,EAST
+ORD-1008,Sample Customer 08,sample08@example.com,99.00,2026-10-08,pending,SOUTH
+ORD-1012,Sample Customer 12,sample12@example.com,41.25,2026-10-09,paid,SOUTH
+ORD-1011,Sample Customer 11,sample11@example.com,230.10,2026-10-10,paid,NORTH
+ORD-1010,Sample Customer 10,sample10@example.com,66.00,2026-10-11,pending,WEST
+ORD-1007,Sample Customer 07,sample07@example.com,75.60,2026-10-12,paid,NORTH
+ORD-1013,Zero amount,sample13@example.com,0.00,2026-10-15,paid,UNKNOWN

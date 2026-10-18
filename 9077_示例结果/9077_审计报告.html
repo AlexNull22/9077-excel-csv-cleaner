@@ -1,0 +1,195 @@
+<!doctype html><html lang="en" translate="no"><meta charset="utf-8"><meta name="google" content="notranslate"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Data quality audit</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f2f5f8;color:#173348;font:15px/1.5 system-ui,Segoe UI,sans-serif}main{max-width:1300px;margin:40px auto;padding:0 28px}header{border-bottom:1px solid #d3dfe7;padding-bottom:25px}.eyebrow{letter-spacing:.16em;font-size:12px;font-weight:750;color:#117c86}h1{font-size:38px;line-height:1.15;margin:10px 0}h2{font-size:21px;margin-top:34px}.muted{color:#617789;overflow-wrap:anywhere}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin:26px 0}.card{background:white;border:1px solid #d9e3ea;border-radius:12px;padding:19px;box-shadow:0 5px 18px #17334806}.card span{display:block;font-size:11px;letter-spacing:.1em;color:#617789}.card strong{display:block;font-size:34px;font-weight:650;margin-top:6px}.valid strong{color:#087b62}.invalid strong{color:#b74348}.duplicate strong{color:#956223}.filtered strong{color:#6250a4}.note{background:#e4f2f1;border-left:4px solid #198d89;padding:15px 20px;border-radius:5px}.controls{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}select{background:white;border:1px solid #b9cbd8;border-radius:7px;padding:9px;color:#173348}.table{overflow:auto;border:1px solid #d9e3ea;border-radius:10px;background:white}table{width:100%;border-collapse:collapse}th{background:#173348;color:white;text-align:left;font-size:12px;letter-spacing:.04em;padding:14px}td{padding:13px 14px;border-bottom:1px solid #e4ebef;vertical-align:top}td:first-child{width:90px}td:nth-child(2){width:115px}td:nth-child(3){min-width:240px}summary{cursor:pointer;color:#117c86;font-size:13px;white-space:nowrap}details[open] summary{margin-bottom:10px}pre{margin:0;font:12px/1.6 ui-monospace,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;min-width:260px}.badge{display:inline-block;background:#e9eef3;border-radius:12px;padding:3px 10px;font-size:12px}.badge.valid{background:#dff3e9;color:#087b62}.badge.invalid{background:#fde8e8;color:#a43940}.badge.duplicate{background:#fff0d6;color:#956223}.badge.filtered{background:#eee8fb;color:#6250a4}footer{padding:25px 0;font-size:12px;color:#617789}@media(max-width:600px){main{margin:24px auto;padding:0 14px}h1{font-size:29px}}</style>
+<main><header><div class="eyebrow">LOCAL DATA CLEANER / QUALITY CONTROL</div><h1>Excel and CSV cleaning audit</h1><div class="muted">9077_示例订单.csv<br>Generated 2026-10-18T20:14:55+00:00</div><p class="muted" style="font-size:12px;margin-bottom:0">Independent portfolio demo. Included sample data is synthetic.</p></header><section class="cards"><div class="card processed"><span>PROCESSED</span><strong>24</strong></div><div class="card valid"><span>VALID</span><strong>13</strong></div><div class="card invalid"><span>INVALID</span><strong>5</strong></div><div class="card duplicate"><span>DUPLICATE</span><strong>3</strong></div><div class="card filtered"><span>FILTERED</span><strong>3</strong></div></section><div class="note"><b>Every source row is accounted for.</b> Processed = valid + invalid + duplicate + filtered. Blank rows skipped: 0. Only valid rows appear in the clean CSV and workbook. Duplicate detection uses the first valid normalized key before filters.</div><div class="controls"><h2>Row audit</h2><label>Show status <select id="status"><option value="all">All rows</option><option>valid</option><option>invalid</option><option>duplicate</option><option>filtered</option></select></label></div><div class="table"><table><thead><tr><th>SOURCE ROW</th><th>STATUS</th><th>REASON</th><th>ORIGINAL VALUES</th></tr></thead><tbody><tr data-status="valid"><td>2</td><td><span class="badge valid">valid</span></td><td>Passed all checks</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot; ord-1001 &quot;,
+  &quot;customer&quot;: &quot;Sample Customer 01&quot;,
+  &quot;email&quot;: &quot; SAMPLE01@EXAMPLE.COM &quot;,
+  &quot;amount&quot;: &quot;125.50&quot;,
+  &quot;order_date&quot;: &quot;2026-10-06&quot;,
+  &quot;status&quot;: &quot;PAID&quot;,
+  &quot;region&quot;: &quot;east&quot;
+}</pre></details></td></tr><tr data-status="valid"><td>3</td><td><span class="badge valid">valid</span></td><td>Passed all checks</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-1002&quot;,
+  &quot;customer&quot;: &quot;Sample Customer 02&quot;,
+  &quot;email&quot;: &quot;sample02@example.com&quot;,
+  &quot;amount&quot;: &quot;86.20&quot;,
+  &quot;order_date&quot;: &quot;2026-10-02&quot;,
+  &quot;status&quot;: &quot;pending&quot;,
+  &quot;region&quot;: &quot;west&quot;
+}</pre></details></td></tr><tr data-status="valid"><td>4</td><td><span class="badge valid">valid</span></td><td>Passed all checks</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-1003&quot;,
+  &quot;customer&quot;: &quot;Sample Customer 03&quot;,
+  &quot;email&quot;: &quot;sample03@example.com&quot;,
+  &quot;amount&quot;: &quot;210.00&quot;,
+  &quot;order_date&quot;: &quot;10/04/2026&quot;,
+  &quot;status&quot;: &quot;paid&quot;,
+  &quot;region&quot;: &quot;north&quot;
+}</pre></details></td></tr><tr data-status="valid"><td>5</td><td><span class="badge valid">valid</span></td><td>Passed all checks</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-1004&quot;,
+  &quot;customer&quot;: &quot;Sample Customer 04&quot;,
+  &quot;email&quot;: &quot;sample04@example.com&quot;,
+  &quot;amount&quot;: &quot;49.95&quot;,
+  &quot;order_date&quot;: &quot;2026-10-01&quot;,
+  &quot;status&quot;: &quot;paid&quot;,
+  &quot;region&quot;: &quot;south&quot;
+}</pre></details></td></tr><tr data-status="valid"><td>6</td><td><span class="badge valid">valid</span></td><td>Passed all checks</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-1005&quot;,
+  &quot;customer&quot;: &quot;Sample Customer 05&quot;,
+  &quot;email&quot;: &quot;sample05@example.com&quot;,
+  &quot;amount&quot;: &quot;305.40&quot;,
+  &quot;order_date&quot;: &quot;2026-10-05&quot;,
+  &quot;status&quot;: &quot;pending&quot;,
+  &quot;region&quot;: &quot;east&quot;
+}</pre></details></td></tr><tr data-status="valid"><td>7</td><td><span class="badge valid">valid</span></td><td>Passed all checks</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-1006&quot;,
+  &quot;customer&quot;: &quot;Sample Customer 06&quot;,
+  &quot;email&quot;: &quot;sample06@example.com&quot;,
+  &quot;amount&quot;: &quot;120.00&quot;,
+  &quot;order_date&quot;: &quot;2026-10-03&quot;,
+  &quot;status&quot;: &quot;paid&quot;,
+  &quot;region&quot;: &quot;west&quot;
+}</pre></details></td></tr><tr data-status="valid"><td>8</td><td><span class="badge valid">valid</span></td><td>Passed all checks</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-1007&quot;,
+  &quot;customer&quot;: &quot;Sample Customer 07&quot;,
+  &quot;email&quot;: &quot;sample07@example.com&quot;,
+  &quot;amount&quot;: &quot;75.60&quot;,
+  &quot;order_date&quot;: &quot;2026-10-12&quot;,
+  &quot;status&quot;: &quot;paid&quot;,
+  &quot;region&quot;: &quot;north&quot;
+}</pre></details></td></tr><tr data-status="valid"><td>9</td><td><span class="badge valid">valid</span></td><td>Passed all checks</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-1008&quot;,
+  &quot;customer&quot;: &quot;Sample Customer 08&quot;,
+  &quot;email&quot;: &quot;sample08@example.com&quot;,
+  &quot;amount&quot;: &quot;99.00&quot;,
+  &quot;order_date&quot;: &quot;2026-10-08&quot;,
+  &quot;status&quot;: &quot;pending&quot;,
+  &quot;region&quot;: &quot;south&quot;
+}</pre></details></td></tr><tr data-status="valid"><td>10</td><td><span class="badge valid">valid</span></td><td>Passed all checks</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-1009&quot;,
+  &quot;customer&quot;: &quot;Sample Customer 09&quot;,
+  &quot;email&quot;: &quot;sample09@example.com&quot;,
+  &quot;amount&quot;: &quot;184.75&quot;,
+  &quot;order_date&quot;: &quot;2026-10-07&quot;,
+  &quot;status&quot;: &quot;paid&quot;,
+  &quot;region&quot;: &quot;east&quot;
+}</pre></details></td></tr><tr data-status="valid"><td>11</td><td><span class="badge valid">valid</span></td><td>Passed all checks</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-1010&quot;,
+  &quot;customer&quot;: &quot;Sample Customer 10&quot;,
+  &quot;email&quot;: &quot;sample10@example.com&quot;,
+  &quot;amount&quot;: &quot;66.00&quot;,
+  &quot;order_date&quot;: &quot;2026-10-11&quot;,
+  &quot;status&quot;: &quot;pending&quot;,
+  &quot;region&quot;: &quot;west&quot;
+}</pre></details></td></tr><tr data-status="valid"><td>12</td><td><span class="badge valid">valid</span></td><td>Passed all checks</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-1011&quot;,
+  &quot;customer&quot;: &quot;Sample Customer 11&quot;,
+  &quot;email&quot;: &quot;sample11@example.com&quot;,
+  &quot;amount&quot;: &quot;230.10&quot;,
+  &quot;order_date&quot;: &quot;2026-10-10&quot;,
+  &quot;status&quot;: &quot;paid&quot;,
+  &quot;region&quot;: &quot;north&quot;
+}</pre></details></td></tr><tr data-status="valid"><td>13</td><td><span class="badge valid">valid</span></td><td>Passed all checks</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-1012&quot;,
+  &quot;customer&quot;: &quot;Sample Customer 12&quot;,
+  &quot;email&quot;: &quot;sample12@example.com&quot;,
+  &quot;amount&quot;: &quot;41.25&quot;,
+  &quot;order_date&quot;: &quot;2026-10-09&quot;,
+  &quot;status&quot;: &quot;paid&quot;,
+  &quot;region&quot;: &quot;south&quot;
+}</pre></details></td></tr><tr data-status="duplicate"><td>14</td><td><span class="badge duplicate">duplicate</span></td><td>duplicate of source row 2 on order_id</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ord-1001&quot;,
+  &quot;customer&quot;: &quot;Duplicate 01&quot;,
+  &quot;email&quot;: &quot;duplicate01@example.com&quot;,
+  &quot;amount&quot;: &quot;125.50&quot;,
+  &quot;order_date&quot;: &quot;2026-10-06&quot;,
+  &quot;status&quot;: &quot;paid&quot;,
+  &quot;region&quot;: &quot;east&quot;
+}</pre></details></td></tr><tr data-status="duplicate"><td>15</td><td><span class="badge duplicate">duplicate</span></td><td>duplicate of source row 4 on order_id</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot; ORD-1003 &quot;,
+  &quot;customer&quot;: &quot;Duplicate 03&quot;,
+  &quot;email&quot;: &quot;duplicate03@example.com&quot;,
+  &quot;amount&quot;: &quot;210.00&quot;,
+  &quot;order_date&quot;: &quot;2026-10-04&quot;,
+  &quot;status&quot;: &quot;paid&quot;,
+  &quot;region&quot;: &quot;north&quot;
+}</pre></details></td></tr><tr data-status="duplicate"><td>16</td><td><span class="badge duplicate">duplicate</span></td><td>duplicate of source row 9 on order_id</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ord-1008&quot;,
+  &quot;customer&quot;: &quot;Duplicate 08&quot;,
+  &quot;email&quot;: &quot;duplicate08@example.com&quot;,
+  &quot;amount&quot;: &quot;99.00&quot;,
+  &quot;order_date&quot;: &quot;2026-10-08&quot;,
+  &quot;status&quot;: &quot;pending&quot;,
+  &quot;region&quot;: &quot;south&quot;
+}</pre></details></td></tr><tr data-status="invalid"><td>17</td><td><span class="badge invalid">invalid</span></td><td>amount: number is below 0</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-2001&quot;,
+  &quot;customer&quot;: &quot;Invalid amount&quot;,
+  &quot;email&quot;: &quot;sample20@example.com&quot;,
+  &quot;amount&quot;: &quot;-10.00&quot;,
+  &quot;order_date&quot;: &quot;2026-10-13&quot;,
+  &quot;status&quot;: &quot;paid&quot;,
+  &quot;region&quot;: &quot;east&quot;
+}</pre></details></td></tr><tr data-status="invalid"><td>18</td><td><span class="badge invalid">invalid</span></td><td>email: invalid email address</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-2002&quot;,
+  &quot;customer&quot;: &quot;Invalid email&quot;,
+  &quot;email&quot;: &quot;broken-email&quot;,
+  &quot;amount&quot;: &quot;100.00&quot;,
+  &quot;order_date&quot;: &quot;2026-10-13&quot;,
+  &quot;status&quot;: &quot;paid&quot;,
+  &quot;region&quot;: &quot;west&quot;
+}</pre></details></td></tr><tr data-status="invalid"><td>19</td><td><span class="badge invalid">invalid</span></td><td>customer: required value is missing</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-2003&quot;,
+  &quot;customer&quot;: &quot;&quot;,
+  &quot;email&quot;: &quot;sample22@example.com&quot;,
+  &quot;amount&quot;: &quot;100.00&quot;,
+  &quot;order_date&quot;: &quot;2026-10-13&quot;,
+  &quot;status&quot;: &quot;paid&quot;,
+  &quot;region&quot;: &quot;north&quot;
+}</pre></details></td></tr><tr data-status="invalid"><td>20</td><td><span class="badge invalid">invalid</span></td><td>order_date: date does not match %Y-%m-%d, %m/%d/%Y</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-2004&quot;,
+  &quot;customer&quot;: &quot;Invalid date&quot;,
+  &quot;email&quot;: &quot;sample23@example.com&quot;,
+  &quot;amount&quot;: &quot;100.00&quot;,
+  &quot;order_date&quot;: &quot;2026-02-30&quot;,
+  &quot;status&quot;: &quot;paid&quot;,
+  &quot;region&quot;: &quot;south&quot;
+}</pre></details></td></tr><tr data-status="filtered"><td>21</td><td><span class="badge filtered">filtered</span></td><td>excluded by filter: status in [&#x27;paid&#x27;, &#x27;pending&#x27;]</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-3001&quot;,
+  &quot;customer&quot;: &quot;Cancelled 01&quot;,
+  &quot;email&quot;: &quot;sample30@example.com&quot;,
+  &quot;amount&quot;: &quot;50.00&quot;,
+  &quot;order_date&quot;: &quot;2026-10-14&quot;,
+  &quot;status&quot;: &quot;cancelled&quot;,
+  &quot;region&quot;: &quot;east&quot;
+}</pre></details></td></tr><tr data-status="filtered"><td>22</td><td><span class="badge filtered">filtered</span></td><td>excluded by filter: status in [&#x27;paid&#x27;, &#x27;pending&#x27;]</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-3002&quot;,
+  &quot;customer&quot;: &quot;Cancelled 02&quot;,
+  &quot;email&quot;: &quot;sample31@example.com&quot;,
+  &quot;amount&quot;: &quot;60.00&quot;,
+  &quot;order_date&quot;: &quot;2026-10-14&quot;,
+  &quot;status&quot;: &quot;cancelled&quot;,
+  &quot;region&quot;: &quot;west&quot;
+}</pre></details></td></tr><tr data-status="filtered"><td>23</td><td><span class="badge filtered">filtered</span></td><td>excluded by filter: status in [&#x27;paid&#x27;, &#x27;pending&#x27;]</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-3003&quot;,
+  &quot;customer&quot;: &quot;Cancelled 03&quot;,
+  &quot;email&quot;: &quot;sample32@example.com&quot;,
+  &quot;amount&quot;: &quot;70.00&quot;,
+  &quot;order_date&quot;: &quot;2026-10-14&quot;,
+  &quot;status&quot;: &quot;cancelled&quot;,
+  &quot;region&quot;: &quot;north&quot;
+}</pre></details></td></tr><tr data-status="valid"><td>24</td><td><span class="badge valid">valid</span></td><td>Passed all checks</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-1013&quot;,
+  &quot;customer&quot;: &quot;Zero amount&quot;,
+  &quot;email&quot;: &quot;sample13@example.com&quot;,
+  &quot;amount&quot;: &quot;0&quot;,
+  &quot;order_date&quot;: &quot;2026-10-15&quot;,
+  &quot;status&quot;: &quot;paid&quot;,
+  &quot;region&quot;: &quot;&quot;
+}</pre></details></td></tr><tr data-status="invalid"><td>25</td><td><span class="badge invalid">invalid</span></td><td>amount: expected a finite decimal with at most 100 digits</td><td><details><summary>View original fields</summary><pre>{
+  &quot;order_id&quot;: &quot;ORD-2005&quot;,
+  &quot;customer&quot;: &quot;Non finite amount&quot;,
+  &quot;email&quot;: &quot;sample24@example.com&quot;,
+  &quot;amount&quot;: &quot;NaN&quot;,
+  &quot;order_date&quot;: &quot;2026-10-13&quot;,
+  &quot;status&quot;: &quot;paid&quot;,
+  &quot;region&quot;: &quot;south&quot;
+}</pre></details></td></tr></tbody></table></div><footer>Processed locally. Source files are unchanged. Spreadsheet formulas are not evaluated. Report contains the original source values for review.</footer></main><script>document.getElementById('status').addEventListener('change',function(){document.querySelectorAll('tbody tr').forEach(r=>r.hidden=this.value!=='all'&&r.dataset.status!==this.value)});</script></html>
